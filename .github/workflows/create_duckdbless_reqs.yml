@@ -24,4 +24,4 @@ jobs:
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
         # short-circuit if we have no changes, otherwise attempt to commit and push
         # should only fail on forks, in which case contributors will need to manually run black, commit, and push
-        git diff-index --quiet HEAD || (git commit -am 'update duckb-less requirements' && git push -f)
+        git diff-index --quiet HEAD || (git commit -am 'update duckb-less requirements' && git push origin -f)
