@@ -24,3 +24,8 @@ jobs:
          cat scripts/duckdbless_requirements.txt
       shell: bash
     - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update duckdbless requirements
+        # feed exact file for ease
+        file_pattern: 'duckdbless_requirements.txt'
+        repository: ./scripts
